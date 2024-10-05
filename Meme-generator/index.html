@@ -14,6 +14,8 @@
             <div class="text top-text" id="top-text">Top Text</div>
             <div class="text bottom-text" id="bottom-text">Bottom Text</div>
         </div>
+
+        <!-- Inputs for text -->
         <label for="top-text-input">Top Text:</label>
         <input type="text" id="top-text-input" placeholder="Top Text" aria-label="Input for top text" />
         
@@ -23,8 +25,13 @@
         <label for="image-url-input">Image URL:</label>
         <input type="url" id="image-url-input" placeholder="Image URL" aria-label="Input for image URL" />
         
+        <!-- File upload for local images -->
+        <input type="file" id="image-file-input" accept="image/*" />
+
+        <!-- Generate button -->
         <button id="generate-meme-btn" aria-label="Generate Meme">Generate Meme</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

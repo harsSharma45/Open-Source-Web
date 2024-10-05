@@ -2,73 +2,135 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); /* Vibrant gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    max-width: 400px;
+    width: 100%;
     text-align: center;
+    transition: transform 0.3s ease; /* Add scaling on hover */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
 }
 
 h1 {
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #333;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .meme-container {
     position: relative;
     margin-bottom: 20px;
+    border: 4px solid #007bff; /* Border around the image */
+    border-radius: 12px;
+    overflow: hidden; /* Ensures text does not go beyond the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Elevate image section */
 }
 
 #meme-image {
     max-width: 100%;
-    border-radius: 8px;
+    height: auto;
+    display: block;
 }
 
 .text {
     position: absolute;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 2em;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* More pronounced text shadow */
+    font-size: 1.8rem;
+    font-weight: 700;
     width: 100%;
     text-align: center;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    text-transform: uppercase;
+    box-sizing: border-box;
 }
 
 .top-text {
-    top: 10px;
+    top: 5%;
 }
 
 .bottom-text {
-    bottom: 10px;
+    bottom: 5%;
 }
 
 input {
-    width: calc(100% - 20px);
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
     margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid transparent;
+    border-radius: 50px; /* Rounded inputs for a softer look */
+    font-size: 1rem;
+    background-color: #f1f3f4;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glowing focus effect */
+    outline: none;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #28a745;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #007bff, #00d4ff); /* Attractive button gradient */
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Button shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
 }
 
 button:hover {
-    background-color: #218838;
+    background: linear-gradient(45deg, #0056b3, #00aaff); /* Slightly darker on hover */
+    box-shadow: 0 7px 20px rgba(0, 123, 255, 0.5);
+    transform: translateY(-3px); /* Lift button on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Button press effect */
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1.4rem;
+    }
+
+    button {
+        padding: 12px;
+    }
 }
