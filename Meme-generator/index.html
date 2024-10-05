@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" role="main">
         <h1>Meme Generator</h1>
-        <div class="meme-container">
+        <div class="meme-container" aria-live="polite">
             <img id="meme-image" src="" alt="Meme Image" />
             <div class="text top-text" id="top-text">Top Text</div>
             <div class="text bottom-text" id="bottom-text">Bottom Text</div>
         </div>
-        <input type="text" id="top-text-input" placeholder="Top Text" />
-        <input type="text" id="bottom-text-input" placeholder="Bottom Text" />
-        <input type="url" id="image-url-input" placeholder="Image URL" />
-        <button id="generate-meme-btn">Generate Meme</button>
+        <label for="top-text-input">Top Text:</label>
+        <input type="text" id="top-text-input" placeholder="Top Text" aria-label="Input for top text" />
+        
+        <label for="bottom-text-input">Bottom Text:</label>
+        <input type="text" id="bottom-text-input" placeholder="Bottom Text" aria-label="Input for bottom text" />
+        
+        <label for="image-url-input">Image URL:</label>
+        <input type="url" id="image-url-input" placeholder="Image URL" aria-label="Input for image URL" />
+        
+        <button id="generate-meme-btn" aria-label="Generate Meme">Generate Meme</button>
     </div>
     <script src="script.js"></script>
 </body>
