@@ -1,0 +1,41 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quote-generator {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+#quote {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    /* Issue 1: Quotes get too long and overflow the container */
+    /* Solution: Ensure text wraps properly or adjust font size */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+/* Issue 2: Page doesn't look good on small screens */
+/* Solution: Make layout responsive */

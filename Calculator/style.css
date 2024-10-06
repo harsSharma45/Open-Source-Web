@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding-right: 10px;
+    /* Issue 1: The display allows more than just numbers */
+    /* Solution: Add validation in JS */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+button:nth-child(16) {
+    grid-column: span 2;
+    /* Issue 2: '=' button should take up two columns */
+    /* Fix: Adjust the grid correctly */
+}
+
+button:nth-child(17) {
+    grid-column: span 2;
+}
