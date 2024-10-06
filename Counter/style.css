@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to bottom, #4b79a1, #283e51);
+  /* Replace 'pic.jpg' with a gradient background. */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  /* Use a semi-transparent background color for better readability. */
+  height: 150px;
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+#countLabel {
+  color: #fff;
+  font-size: 3rem;
+  margin-right: 40px;
+  border: 2px solid black;
+  background-color: black;
+}
+
+.increment,
+.reset,
+.decrement {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.inc-btn,
+.reset-btn,
+.dec-btn {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 9px;
+  margin-top: 8px;
+  border-radius: 6px;
+  cursor: pointer; /* Add cursor pointer to indicate interactivity. */
+}
+
+.inc-btn:hover,
+.dec-btn:hover,
+.reset-btn:hover {
+  background-color: white;
+  color: black;
+}
