@@ -7,29 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" role="main">
-        <h1>Meme Generator</h1>
-        <div class="meme-container" aria-live="polite">
-            <img id="meme-image" src="" alt="Meme Image" />
-            <div class="text top-text" id="top-text">Top Text</div>
-            <div class="text bottom-text" id="bottom-text">Bottom Text</div>
+    <div class="container" role="main" aria-labelledby="main-heading">
+        <h1 id="main-heading">Meme Generator</h1>
+
+        <!-- Meme Container -->
+        <div class="meme-container" aria-live="polite" role="region" aria-label="Meme image with text">
+            <img id="meme-image" src="" alt="Generated meme image" />
+            <div class="text top-text" id="top-text" aria-live="polite">Top Text</div>
+            <div class="text bottom-text" id="bottom-text" aria-live="polite">Bottom Text</div>
         </div>
 
         <!-- Inputs for text -->
         <label for="top-text-input">Top Text:</label>
-        <input type="text" id="top-text-input" placeholder="Top Text" aria-label="Input for top text" />
-        
+        <input type="text" id="top-text-input" placeholder="Enter top text for meme" aria-label="Top text input for meme" />
+
         <label for="bottom-text-input">Bottom Text:</label>
-        <input type="text" id="bottom-text-input" placeholder="Bottom Text" aria-label="Input for bottom text" />
-        
+        <input type="text" id="bottom-text-input" placeholder="Enter bottom text for meme" aria-label="Bottom text input for meme" />
+
         <label for="image-url-input">Image URL:</label>
-        <input type="url" id="image-url-input" placeholder="Image URL" aria-label="Input for image URL" />
-        
+        <input type="url" id="image-url-input" placeholder="Enter image URL" aria-label="Input field for image URL" />
+
         <!-- File upload for local images -->
-        <input type="file" id="image-file-input" accept="image/*" />
+        <label for="image-file-input">Upload Image:</label>
+        <input type="file" id="image-file-input" aria-label="File upload for meme image" accept="image/*" />
 
         <!-- Generate button -->
-        <button id="generate-meme-btn" aria-label="Generate Meme">Generate Meme</button>
+        <button id="generate-meme-btn" aria-label="Generate meme image with text" tabindex="0">Generate Meme</button>
     </div>
 
     <script src="script.js"></script>
