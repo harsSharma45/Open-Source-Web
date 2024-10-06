@@ -106,3 +106,32 @@ function adjustTextSize(direction) {
 
     alertRegion.textContent = `Text size ${direction === 1 ? 'increased' : 'decreased'}.`;
 }
+
+// const url = 'https://meme-generator-and-template-database.p.rapidapi.com/template/Bernie_I_Am_Once_Again_Asking_For_Your_Support';
+// const options = {
+// 	method: 'POST',
+// 	headers: {
+// 		'x-rapidapi-key': 'Sign Up for Key',
+// 		'x-rapidapi-host': 'meme-generator-and-template-database.p.rapidapi.com',
+// 		'Content-Type': 'application/json'
+// 	},
+// 	body: {
+// 		text0: {
+// 			text: 'for your financial support',
+// 			font_size: 33,
+// 			font: 'kanit'
+// 		},
+// 		text1: {
+// 			text: 'This API developer:',
+// 			font_size: 30
+// 		}
+// 	}
+// };
+
+// try {
+// 	const response = await fetch(url, options);
+// 	const result = await response.text();
+// 	console.log(result);
+// } catch (error) {
+// 	console.error(error);
+// }
