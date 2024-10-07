@@ -40,5 +40,5 @@ button:hover {
     margin-top: 20px;
     font-size: 1.5rem;
     /* Issue 2: Result text color is same as background, making it invisible */
-    color: #ffffff;
+    color: #000000;
 }
