@@ -17,9 +17,9 @@ function generateQuote() {
     const quoteElement = document.getElementById('quote');
 
     let randomIndex = generateRandomIndex();
-    do {
+    while (randomIndex === LAST_QUOTE_INDEX) {
         randomIndex = generateRandomIndex();
-    } while (randomIndex === LAST_QUOTE_INDEX);
+    }
     LAST_QUOTE_INDEX = randomIndex;
 
     quoteElement.innerText = quotes[randomIndex];
