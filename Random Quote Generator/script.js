@@ -7,15 +7,23 @@ const quotes = [
     "If you are not willing to risk the usual, you will have to settle for the ordinary. - Jim Rohn"
 ];
 
+let LAST_QUOTE_INDEX = -1; //to keep track of last quote.
+
+function generateRandomIndex() {
+    return Math.floor(Math.random() * quotes.length)
+}
+
 function generateQuote() {
     const quoteElement = document.getElementById('quote');
-    
-    // Issue 3: The quote is sometimes the same when clicking the button multiple times
-    // Solution: Ensure that a new quote is picked randomly each time
-    let randomIndex = Math.floor(Math.random() * quotes.length);
-    
+
+    let randomIndex = generateRandomIndex();
+    while (randomIndex === LAST_QUOTE_INDEX) {
+        randomIndex = generateRandomIndex();
+    }
+    LAST_QUOTE_INDEX = randomIndex;
+
     quoteElement.innerText = quotes[randomIndex];
-    
+
     // Issue 4: No animation or feedback on quote change
     // Solution: Add a simple fade-in animation to the quote
 }
