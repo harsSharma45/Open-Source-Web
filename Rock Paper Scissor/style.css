@@ -43,3 +43,26 @@ button:hover {
     /* Solution: Update result text based on the winner */
 }
 
+.computer-container{
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 400px;
+    height:37vh;
+
+}
+
+.computer-container h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 27px;
+}
+
+.computer-container button{
+    margin-left: 15vh;
+    width:20vh;
+    height: 10vh;
+    font-size: 20px;
+}
