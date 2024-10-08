@@ -4,7 +4,8 @@ const quotes = [
     "Whether you think you can or you think you can’t, you’re right. - Henry Ford",
     "Your time is limited, so don’t waste it living someone else’s life. - Steve Jobs",
     "The only way to do great work is to love what you do. - Steve Jobs",
-    "If you are not willing to risk the usual, you will have to settle for the ordinary. - Jim Rohn"
+    "If you are not willing to risk the usual, you will have to settle for the ordinary. - Jim Rohn",
+    "Alone we can do so little, together we can do so much. - Helen Keller"
 ];
 
 function generateQuote() {
