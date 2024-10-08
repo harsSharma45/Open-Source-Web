@@ -1,8 +1,11 @@
+
+const computer = document.querySelector(".buttonn-text")
 function playGame(playerChoice) {
     const resultElement = document.getElementById('result');
     
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ['🪨 rock', '📄 paper', '✂️ scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    computer.innerHTML=`${computerChoice}`
     
     // Issue 2: Computer always seems to win
     // Solution: Fix the logic for determining the winner
