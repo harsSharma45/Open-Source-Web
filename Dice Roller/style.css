@@ -42,3 +42,22 @@ button:hover {
     /* Issue 2: Result text color is same as background, making it invisible */
     color: #000000;
 }
+
+
+
+button:hover {
+    background-color: #3498db;
+}
+
+@keyframes dice-roll {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rolling {
+    animation: dice-roll 1s ease-out;
+}
