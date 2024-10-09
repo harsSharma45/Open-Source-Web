@@ -16,14 +16,31 @@ function generateRandomIndex() {
 function generateQuote() {
     const quoteElement = document.getElementById('quote');
 
-    let randomIndex = generateRandomIndex();
-    while (randomIndex === LAST_QUOTE_INDEX) {
-        randomIndex = generateRandomIndex();
-    }
-    LAST_QUOTE_INDEX = randomIndex;
 
-    quoteElement.innerText = quotes[randomIndex];
 
     // Issue 4: No animation or feedback on quote change
     // Solution: Add a simple fade-in animation to the quote
+    // Remove any existing fade-in-active class to reset animation
+    // Reset the opacity by removing the fade-in-active class
+        // Remove fade-out and add fade-in class to trigger fade-in effect
+
+    quoteElement.classList.remove('fade-in');
+    quoteElement.classList.add('fade-out');
+        
+    // After the fade-out completes, update the quote and fade it back in
+    setTimeout(() => {
+        let randomIndex = generateRandomIndex();
+        while (randomIndex === LAST_QUOTE_INDEX) {
+            randomIndex = generateRandomIndex();
+        }
+        LAST_QUOTE_INDEX = randomIndex;
+    
+        // Change the quote text
+        quoteElement.innerText = quotes[randomIndex];
+    
+        // Remove fade-out and add fade-in class to trigger fade-in effect
+        quoteElement.classList.remove('fade-out');
+        quoteElement.classList.add('fade-in');
+    }, 500);
+        
 }
