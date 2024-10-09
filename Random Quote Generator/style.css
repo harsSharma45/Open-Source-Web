@@ -37,5 +37,14 @@ button:hover {
     background-color: #004d40;
 }
 
+.fade-out {
+    opacity: 0;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 1;
+}
+
 /* Issue 2: Page doesn't look good on small screens */
 /* Solution: Make layout responsive */
