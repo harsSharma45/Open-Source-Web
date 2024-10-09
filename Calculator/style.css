@@ -1,6 +1,5 @@
-/* General Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,120 +8,50 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Calculator Container */
 .calculator {
     background-color: #fff;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: max-content;
 }
 
-/* Display Styling */
 #display {
     width: 100%;
-    height: 60px;
+    height: 40px;
     text-align: right;
-    font-size: 2rem;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding-right: 10px;
+    /* Issue 1: The display allows more than just numbers */
+    /* Solution: Add validation in JS */
 }
 
-/* Styling for Buttons Container */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
 }
 
-/* General Button Styling */
 button {
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: none;
-    border-radius: 10px;
-    background-color: #e0e0e0;
-    color: #333;
+    background-color: #f0f0f0;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:active {
     background-color: #ccc;
-    transform: scale(0.98);
 }
 
-button:nth-child(1) { /* Clear (C) button */
-    background-color: #ff9f43;
-    color: #fff;
-}
-button:nth-child(2) { /* Delete (DEL) button */
-    background-color: #ff9f43;
-    color: #fff;
-}
-button:nth-child(16) { /* Equals button */
-    background-color: #ff9f43;
-    color: #fff;
-}
-button:nth-child(3) { /* Division (/) */
-    background-color: #ff9f43;
-    color: #fff;
-}
-button:nth-child(4) { /* Multiplication (*) */
-    background-color: #ff9f43;
-    color: #fff;
-}
-button:nth-child(8) { /* Subtraction (-) */
-    background-color: #ff9f43;
-    color: #fff;
-}
-button:nth-child(12) { /* Addition (+) */
-    background-color: #ff9f43;
-    color: #fff;
-}
-
-
-button:nth-child(1):active,
-button:nth-child(2):active,
-button:nth-child(3):active,
-button:nth-child(4):active,
-button:nth-child(8):active,
-button:nth-child(12):active {
-    background-color: #ff7841;
-}
-
-/* Styling for the Equals Button */
-.equals-button {
+button:nth-child(16) {
     grid-column: span 2;
-    background-color: #28a745;
-    color: white;
+    /* Issue 2: '=' button should take up two columns */
+    /* Fix: Adjust the grid correctly */
 }
 
-.equals-button:active {
-    background-color: #218838;
-}
-
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 400px) {
-    .calculator {
-        width: 100%;
-        padding: 15px;
-    }
-
-    #display {
-        font-size: 1.5rem;
-        height: 50px;
-    }
-
-    button {
-        padding: 15px;
-        font-size: 1.2rem;
-    }
+button:nth-child(17) {
+    grid-column: span 2;
 }

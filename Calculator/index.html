@@ -7,32 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator" role="application" aria-label="Basic Calculator">
-        <input type="text" id="display" aria-live="polite" aria-label="Display" readonly />
-
+    <div class="calculator">
+        <input type="text" id="display" readonly />
         <div class="buttons">
-            <button onclick="clearDisplay()" aria-label="Clear Display (C)">C</button>
-            <button onclick="deleteLast()" aria-label="Delete Last Character">DEL</button>
-            <button onclick="appendToDisplay('/')" aria-label="Divide (/)">/</button>
-            <button onclick="appendToDisplay('*')" aria-label="Multiply (*)">*</button>
-
-            <button onclick="appendToDisplay('7')" aria-label="7">7</button>
-            <button onclick="appendToDisplay('8')" aria-label="8">8</button>
-            <button onclick="appendToDisplay('9')" aria-label="9">9</button>
-            <button onclick="appendToDisplay('-')" aria-label="Subtract (-)">-</button>
-
-            <button onclick="appendToDisplay('4')" aria-label="4">4</button>
-            <button onclick="appendToDisplay('5')" aria-label="5">5</button>
-            <button onclick="appendToDisplay('6')" aria-label="6">6</button>
-            <button onclick="appendToDisplay('+')" aria-label="Add (+)">+</button>
-
-            <button onclick="appendToDisplay('1')" aria-label="1">1</button>
-            <button onclick="appendToDisplay('2')" aria-label="2">2</button>
-            <button onclick="appendToDisplay('3')" aria-label="3">3</button>
-            <button onclick="appendToDisplay('.')" aria-label="Decimal (.)">.</button> <!-- Decimal after 3 -->
-
-            <button onclick="appendToDisplay('0')" aria-label="0">0</button>
-            <button onclick="calculate()" aria-label="Equals (=)" class="equals-button">=</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
         </div>
     </div>
 
