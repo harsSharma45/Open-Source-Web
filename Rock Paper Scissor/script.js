@@ -1,14 +1,16 @@
 
 const computer = document.querySelector(".buttonn-text")
+const choiceMap = {
+    rock: '🪨',
+    paper: '📄',
+    scissors: '✂️'
+}
 function playGame(playerChoice) {
     const resultElement = document.getElementById('result');
-    
-    const choices = ['🪨 rock', '📄 paper', '✂️ scissors'];
+
+    const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    computer.innerHTML=`${computerChoice}`
-    
-    // Issue 2: Computer always seems to win
-    // Solution: Fix the logic for determining the winner
+    computer.innerHTML = `${choiceMap[computerChoice]} ${computerChoice}`
 
     // Determine the winner
     let result;
@@ -23,7 +25,7 @@ function playGame(playerChoice) {
     } else {
         result = "Computer wins!";
     }
-    
+
     // Issue 3: No feedback about the computer's choice
     // Solution: Display the computer's choice along with the result
 

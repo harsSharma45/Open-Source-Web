@@ -9,27 +9,33 @@
 <body>
     <div class="container" role="main" aria-labelledby="main-heading">
         <h1 id="main-heading">Meme Generator</h1>
-        <div class="meme-container" aria-live="polite" role="region" aria-label="Meme image with text" style="display: none;">
-            <canvas id="meme-canvas" aria-label="Generated meme canvas"></canvas>
-            <button id="save-meme-btn" aria-label="Save meme to device" tabindex="0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-            </button>
+
+        <!-- Meme Container -->
+        <div class="meme-container" aria-live="polite" role="region" aria-label="Meme image with text">
+            <img id="meme-image" src="" alt="Generated meme image" />
+            <div class="text top-text" id="top-text" aria-live="polite">Top Text</div>
+            <div class="text bottom-text" id="bottom-text" aria-live="polite">Bottom Text</div>
         </div>
+
+        <!-- Inputs for text -->
         <label for="top-text-input">Top Text:</label>
         <input type="text" id="top-text-input" placeholder="Enter top text for meme" aria-label="Top text input for meme" />
+
         <label for="bottom-text-input">Bottom Text:</label>
         <input type="text" id="bottom-text-input" placeholder="Enter bottom text for meme" aria-label="Bottom text input for meme" />
+
         <label for="image-url-input">Image URL:</label>
         <input type="url" id="image-url-input" placeholder="Enter image URL" aria-label="Input field for image URL" />
+
+        <!-- File upload for local images -->
         <label for="image-file-input">Upload Image:</label>
         <input type="file" id="image-file-input" aria-label="File upload for meme image" accept="image/*" />
+
+        <!-- Generate button -->
         <button id="generate-meme-btn" aria-label="Generate meme image with text" tabindex="0">Generate Meme</button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

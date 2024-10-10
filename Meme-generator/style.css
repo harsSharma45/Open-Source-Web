@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     overflow-x: auto;
     padding: 20px;
 }
@@ -26,7 +26,6 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     transition: transform 0.3s ease;
-    overflow: hidden;
 }
 
 .container:hover {
@@ -52,10 +51,32 @@ h1 {
     width: 100%;
 }
 
-#meme-canvas {
+#meme-image {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.text {
+    position: absolute;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.top-text {
+    top: 5%;
+}
+
+.bottom-text {
+    bottom: 5%;
 }
 
 input, button {

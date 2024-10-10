@@ -1,26 +1,61 @@
-let display = document.getElementById('display');
+let operation = null; // To store current operation (sqrt, pow, sin, etc.)
+let currentValue = ''; // To store the number
 
+// Function to append numbers or operators to display
+function appendToDisplay(value) {
+    const display = document.getElementById('display');
+    currentValue += value;
+    display.value = currentValue;
+}
+
+// Function to clear the display
 function clearDisplay() {
+    const display = document.getElementById('display');
+    currentValue = '';
+    operation = null;
     display.value = '';
 }
 
+// Function to delete the last character
 function deleteLast() {
-    display.value = display.value.slice(0, -1);
+    const display = document.getElementById('display');
+    currentValue = currentValue.slice(0, -1);
+    display.value = currentValue;
 }
 
-function appendToDisplay(value) {
-    display.value += value;
+// Set the operation type (e.g., sqrt, pow, sin)
+function setOperation(op) {
+    operation = op;
 }
 
+// Function to handle calculations
 function calculate() {
-    try {
-        // Issue 3: If user inputs two operators, it will break (e.g., 5++2)
-        // Solution: You need to validate and prevent invalid expressions.
-        display.value = eval(display.value);
-    } catch (error) {
-        display.value = 'Error'; // Shows error when there's an invalid expression
-    }
-}
+    const display = document.getElementById('display');
+    let result = parseFloat(currentValue);
 
-// Issue 4: No validation for decimal points, user can enter multiple '.'.
-// Solution: Add logic to handle proper decimal usage.
+    // Apply the operation if any
+    if (operation) {
+        switch (operation) {
+            case 'sqrt':
+                result = Math.sqrt(result);
+                break;
+            case 'pow':
+                result = Math.pow(result, 2); // For x²
+                break;
+            case 'sin':
+                result = Math.sin(result);
+                break;
+            case 'cos':
+                result = Math.cos(result);
+                break;
+            case 'tan':
+                result = Math.tan(result);
+                break;
+        }
+        operation = null; // Reset operation after applying
+    }
+
+    // Display the result
+    display.value = result;
+    currentValue = result.toString(); // Update current value to result
+}
